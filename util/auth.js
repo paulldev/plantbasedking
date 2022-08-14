@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const API_KEY = "AIzaSyBTWEA5h_GdUg21FGWKM5AYFW2sfACl71w";
+const API_KEY = "AIzaSyAvuU9dMB5yyY9xxXp3kDwhrLrcKBMKCkM";
 
 export async function authenticate(mode, email, password) {
   //TODO Signup API link is different to the signin link https://firebase.google.com/docs/reference/rest/auth
