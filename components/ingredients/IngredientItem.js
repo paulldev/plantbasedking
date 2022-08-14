@@ -1,8 +1,8 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React from "react";
+import { Text } from "react-native";
 
 function IngredientItem() {
-    return <Text>IngredientItem</Text>
+  return <Text>IngredientItem</Text>;
 }
 
 export default IngredientItem;

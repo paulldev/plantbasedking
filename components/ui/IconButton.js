@@ -1,25 +1,26 @@
-import { Pressable, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import React from "react";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
-function IconButton({ icon, color, size, onPress }) {
+function LoadingOverlay({ message }) {
   return (
-    <Pressable
-      style={({ pressed }) => [styles.button, pressed && styles.pressed]}
-      onPress={onPress}
-    >
-      <Ionicons name={icon} color={color} size={size} />
-    </Pressable>
+    <View style={styles.rootContainer}>
+      <Text style={styles.message}>{message}</Text>
+      <ActivityIndicator size="large" />
+    </View>
   );
 }
 
-export default IconButton;
+export default LoadingOverlay;
 
 const styles = StyleSheet.create({
-  button: {
-    margin: 8,
-    borderRadius: 20,
+  rootContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 32,
   },
-  pressed: {
-    opacity: 0.7,
+  message: {
+    fontSize: 16,
+    marginBottom: 12,
   },
 });
